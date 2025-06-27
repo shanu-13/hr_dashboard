@@ -1,0 +1,152 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Background image with dark overlay */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+.auth-background {
+  background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Glassmorphism-style form box */
+.register-container,
+.auth-container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 350px;
+  text-align: center;
+  color: #fff;
+}
+
+/* Headings */
+.register-heading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+/* Inputs */
+.register-form input,
+.auth-container input {
+  width: 100%;
+  padding: 12px 16px;
+  margin: 12px 0;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #0f0f0f;
+  font-size: 1rem;
+  outline: none;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Rounded rectangular button (pill style) */
+.register-button,
+.auth-container button {
+  width: 100%;
+  padding: 14px 0;
+  margin-top: 15px;
+  background: linear-gradient(to right, #9d5d6c, #db70d1);
+  border: none;
+  border-radius: 50px; /* 👈 Oval shape */
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.register-button:hover,
+.auth-container button:hover {
+  background: linear-gradient(to right, #9d5d6c, #db70d1);
+  transform: scale(1.03);
+}
+
+/* Auth page link */
+.auth-link {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+.auth-link a {
+  color: #ff8bd7;
+  text-decoration: none;
+}
+.auth-link a:hover {
+  text-decoration: underline;
+}
+.auth-wrapper {
+  position: relative;
+  width: 800px;
+  max-width: 90%;
+  height: 500px;
+  display: flex;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.5);
+}
+
+/* Panel that slides in/out */
+.auth-panel {
+  flex: 1;
+  padding: 40px;
+  transition: transform 0.6s ease-in-out;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  z-index: 2;
+}
+
+.auth-slide-message {
+  flex: 1;
+  background: linear-gradient(135deg, #ff4b2b, #ff416c);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+  transition: transform 0.6s ease-in-out;
+  z-index: 1;
+}
+
+/* Slide effect */
+.auth-wrapper.register-mode .auth-panel {
+  transform: translateX(100%);
+}
+
+.auth-wrapper.register-mode .auth-slide-message {
+  transform: translateX(-100%);
+}
+
+/* Message styling */
+.auth-slide-message h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.auth-slide-message p {
+  font-size: 1rem;
+  line-height: 1.4;
+}

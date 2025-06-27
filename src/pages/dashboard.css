@@ -1,0 +1,138 @@
+/* src/pages/dashboard.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0f0f0f;
+  color: #fff;
+}
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  color: #0ff;
+  font-size: 24px;
+}
+
+.profile-icon {
+  width: 45px;
+  height: 45px;
+  background-color: #4ecdc4;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 10px #0ff;
+}
+
+.profile-icon:hover {
+  background-color: #38b2a5;
+}
+
+
+.dashboard-container {
+  padding: 20px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-header h1 {
+  color: #00f2ff;
+  text-shadow: 0 0 8px #00f2ff;
+  font-size: 2rem;
+}
+
+.profile-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+/* Metrics */
+.dashboard-metrics {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+
+.metric-card {
+  background: #181818;
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px #00ffcc33;
+  text-align: center;
+  flex: 1;
+  min-width: 140px;
+  transition: transform 0.3s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 18px #00ffcc66;
+}
+
+/* Center layout */
+.dashboard-center {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Charts */
+.chart-wrapper,
+.table-wrapper {
+  background: #181818;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00f2ff33;
+}
+
+.chart-wrapper h4,
+.table-wrapper h4 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Table */
+.table-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-wrapper th,
+.table-wrapper td {
+  padding: 0.5rem;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+
+/* Donut chart row */
+.dashboard-bottom {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.donut-chart {
+  width: 200px;
+  background: #181818;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #aa00ff33;
+  text-align: center;
+}
+
+.donut-chart h4 {
+  margin-bottom: 0.5rem;
+}
